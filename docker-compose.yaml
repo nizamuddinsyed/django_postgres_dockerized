@@ -44,7 +44,7 @@ services:
       - "8000:8000"
     depends_on:
       db:
-        condition: service_healthy  # Ensures DB is ready before starting web
+        condition: service_healthy
 
 volumes:
   pg_data:

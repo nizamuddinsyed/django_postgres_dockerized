@@ -13,7 +13,7 @@ docker compose exec web python manage.py createsuperuser
 ### Step - 4
 webapp --> localhost:8000
 admin panel --> localhost:8000/admin
-database webapp -> localhost:5050
+pgAdmin for database -> localhost:5050
 
 ### Step - 5
 docker compose logs web
