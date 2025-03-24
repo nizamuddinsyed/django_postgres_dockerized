@@ -39,3 +39,12 @@ docker compose logs web
 docker compose down
 ```
 
+### optional : How to migrate data from sqlite3 to postgresql
+```
+docker compose exec web python manage.py dumpdata --natural-primary --natural-foreign --indent 2 > data.json
+
+docker compose exec web python manage.py migrate  
+
+docker compose exec web python manage.py loaddata data.json # importing data
+```
+
